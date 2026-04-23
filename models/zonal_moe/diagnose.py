@@ -19,9 +19,9 @@ from pathlib import Path
 from collections import defaultdict
 
 # ── import your package ──────────────────────────────────────────────────────
-sys.path.insert(0, str(Path(__file__).parent))
-from models import ZonalMoE, AirfoilDataset, geometry_aware_split
-from models.preprocessing import compute_wall_distance, build_knn_graph, compute_geometry_fingerprint, GeometryCache
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from models.zonal_moe import ZonalMoE, AirfoilDataset, geometry_aware_split
+from models.zonal_moe.preprocessing import compute_wall_distance, build_knn_graph, compute_geometry_fingerprint, GeometryCache
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
