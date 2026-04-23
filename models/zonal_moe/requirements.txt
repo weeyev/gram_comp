@@ -1,0 +1,7 @@
+# Zonal MoE dependencies
+torch>=2.0.0
+torch-geometric>=2.4.0
+torch-scatter>=2.1.0
+torch-cluster>=1.6.0
+numpy>=1.21.0
+scikit-learn>=1.0.0

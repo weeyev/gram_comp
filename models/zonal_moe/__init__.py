@@ -1,0 +1,49 @@
+from .model import (
+    ZonalMoE,
+    TemporalEncoder,
+    SharedBackbone,
+    RoutingGate,
+    LaminarExpert,
+    TurbulentExpert,
+    GATLayer,
+)
+from .train import train, WeightedMSELoss
+from .preprocessing import (
+    AirfoilDataset,
+    GeometryCache,
+    geometry_aware_split,
+    compute_wall_distance,
+    build_knn_graph,
+    compute_dataset_statistics,
+    compute_geometry_fingerprint,
+    compute_polynomial_baseline,
+)
+from .inference import predict, analyze_routing, load_model, batch_predict
+
+__all__ = [
+    # Model components
+    "ZonalMoE",
+    "TemporalEncoder",
+    "SharedBackbone",
+    "RoutingGate",
+    "LaminarExpert",
+    "TurbulentExpert",
+    "GATLayer",
+    # Training
+    "train",
+    "WeightedMSELoss",
+    # Data
+    "AirfoilDataset",
+    "GeometryCache",
+    "geometry_aware_split",
+    "compute_wall_distance",
+    "build_knn_graph",
+    "compute_dataset_statistics",
+    "compute_geometry_fingerprint",
+    "compute_polynomial_baseline",
+    # Inference
+    "predict",
+    "analyze_routing",
+    "load_model",
+    "batch_predict",
+]

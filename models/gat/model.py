@@ -51,7 +51,6 @@ def build_graph_and_features(fpath):
     rows, cols = rows[sort_idx], cols[sort_idx]
     return nf, tf, rows, cols, pos.shape[0]
 
-
 def sample_subgraph(rows, cols, k, num_nodes, batch_size, nf_np, tf_np):
     sampled = np.random.choice(num_nodes, size=batch_size, replace=False)
     remap = {old: new for new, old in enumerate(sampled)}
@@ -68,7 +67,6 @@ def sample_subgraph(rows, cols, k, num_nodes, batch_size, nf_np, tf_np):
         np.array(sub_rows, dtype=np.int64),
         np.array(sub_cols, dtype=np.int64),
     )
-
 
 class GATLayers:
     def __init__(
